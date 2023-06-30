@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="styles.css">
+    <title>PokeSearch</title>
+</head>
+<body>
+    <div class="top-section">
+        <div class="header">
+            <h1 class="main-heading">PokeSearch</h1>
+            <h4 class="sub-heading">Search for your favourite Pokemon here!</h4>
+            <div class="powered-by">Powered by <a href="https://pokeapi.co/">PokeAPI</a></div>
+        </div>
+        <div class="search-bar">
+            <input disabled type="text" class="search-input" name="pokename" id="pokename" placeholder="Enter Pokemon Name">
+        </div>
+    </div>
+    <section class="poke-cards"></section>
+    <template class="poke-cards-template">
+        <div class="card-container">
+            <div class="card-top">
+                <h3 class="poke-name" data-name></h3>
+                <img class="poke-img" data-img alt="">
+            </div>
+            <div>
+                <p class="poke-type"><span class="label">Type:&nbsp;</span><span class="poke-type" data-type></span></p>
+                <p class="poke-height"><span class="label">Height:&nbsp;</span><span data-height></span>&nbsp;cm</p>
+                <p class="poke-weight"><span class="label">Weight:&nbsp;</span><span data-weight></span>&nbsp;kg</p>
+            </div>
+        </div>
+    </template>
+    <div class="footer"></div>
+    <a class="top-btn" href="#"><img src="imgs/arrow.png"></a>
+    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
